@@ -23,7 +23,7 @@ public class MyWorker {
             System.out.println(consumerTag+"消息消费中断");
         };
 
-        System.out.println("C3等待接受消息");
+        System.out.println("C1等待接受消息");
         channel.basicConsume(QUEUE_NAME,true,deliverCallback,cancelCallback);
     }
 }

@@ -26,6 +26,8 @@ public class Consumer {
             System.out.println("消息消费中断");
         };
 
+        channel.basicQos(1);
+
         channel.basicConsume(queue_name,true,deliverCallback,cancelCallback);
     }
 }
